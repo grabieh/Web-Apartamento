@@ -1,0 +1,68 @@
+###Solicitar todos los usuarios
+GET http://localhost:1234/user
+
+###Crear usuario
+POST http://localhost:1234/user/register
+Content-Type: application/json
+
+{
+    "nombre": "Gabriel",
+    "email": "algonsukeeltarrabuke@gmail.com",
+    "contrasena": "12345",
+    "telefono": "625789494"
+}
+
+###Login
+
+POST http://localhost:1234/user/login
+Content-Type: application/json
+
+{
+    "email": "algonsukeeltarrabuke@gmail.com",
+    "contrasena": "12345"
+}
+
+###Borrar usuario
+POST http://localhost:1234/user/delete
+Content-Type: application/json
+
+{
+    "email": "algonsukeeltarrabuke@gmail.com"
+}
+
+#############################################################################
+
+###Crear info apartamento
+POST http://localhost:1234/apartment/create
+Content-Type: application/json
+
+{
+    "nombre": "Beachfront Seaview Oasis",
+    "descripcion": "Con vistas al Atlántico, el apartamento vacacional Beachfront Seaview Oasis en Tabaiba es un destino ideal para una estancia agradable. La propiedad de 72 m² consta de una sala de estar, una cocina totalmente equipada, 2 dormitorios y 1 baño, y tiene capacidad para 4 personas. Los servicios y comodidades adicionales incluyen Wi-Fi de alta velocidad (apto para videollamadas), un espacio de trabajo dedicado para la oficina en casa, un televisor, aire acondicionado en la sala de estar, un ventilador, una lavadora, una secadora y un lavavajillas. También se puede proporcionar una cuna y una trona. Esta propiedad cuenta con una terraza privada al aire libre, perfecta para disfrutar del aire libre. Además, los huéspedes tienen acceso a una zona exterior compartida con piscina de agua salada y pista de tenis. Hay aparcamiento gratuito disponible en la calle, y una plaza de aparcamiento disponible en un garaje. Se admiten familias con niños. No se permiten mascotas, fumar ni celebrar eventos. Se ruega a los huéspedes que respeten las horas de silencio durante su estancia (nada de ruido después de las 21h). Hay cámaras de seguridad en el garaje y en la entrada. Este alquiler cuenta con características de ahorro de luz y agua.La propiedad está ubicada en las proximidades de la piscina de Tabaiba y del puerto de Radazul, con acceso directo a la playa. Los enlaces de transporte público están a poca distancia. En las inmediaciones hay restaurantes y una farmacia.",
+    "ubicacion": "Tabaiba Media",
+    "precio": "120.00"
+}
+
+###Obtener informacion de apartamento
+GET  http://localhost:1234/apartment/getInfo/1
+
+
+###Borrar informacion (dejar para despues)
+
+
+#############################################################################
+
+###Escribir una review
+POST http://localhost:1234/reviews/generate
+Content-Type: application/json
+
+{
+    "puntuacion": "10",
+    "comentario": "This is the best apartment I've ever been to. Maria is a wonderful host and we will surely come back next year"
+}
+
+###obtener todas las reviews
+GET http://localhost:1234/reviews
+
+#############################################################################
+
